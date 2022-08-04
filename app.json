@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "discord-expo",
+    "slug": "discord-expo",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
