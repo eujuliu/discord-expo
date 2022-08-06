@@ -1,20 +1,27 @@
 import React, { useState } from "react";
 import { TextInputProps } from "react-native";
 
-import { CustomInputContainer, FloatingLabel, Input } from "./styles";
+import { FloatingLabelContainer, FloatingLabel, Input } from "./styles";
 
 interface FloatingLabelInputProps extends TextInputProps {
   label: string;
-  type: "phone-number" | "email" | "password";
+  type: "number" | "email" | "password" | "country-code";
+  width: string;
 }
 
-export function FloatingLabelInput({ label, type }: FloatingLabelInputProps) {
+export function FloatingLabelInput({
+  label,
+  type,
+  width,
+}: FloatingLabelInputProps) {
   const [isFocused, setIsFocused] = useState(false);
   const [value, setValue] = useState("");
 
   return (
-    <CustomInputContainer>
-      <FloatingLabel isFocused={isFocused} isNotEmpty={value.length !== 0}>
+    <FloatingLabelContainer width={width}>
+      <FloatingLabel
+        isFloating={isFocused || value.length !== 0 || type === "country-code"}
+      >
         {label}
       </FloatingLabel>
       <Input
@@ -22,7 +29,10 @@ export function FloatingLabelInput({ label, type }: FloatingLabelInputProps) {
         onBlur={() => setIsFocused(!isFocused)}
         value={value}
         onChangeText={(newText) => setValue(newText)}
+        keyboardType={
+          type === "number" || type === "country-code" ? "numeric" : "default"
+        }
       />
-    </CustomInputContainer>
+    </FloatingLabelContainer>
   );
 }

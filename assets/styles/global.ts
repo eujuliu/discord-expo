@@ -2,7 +2,6 @@ import styled from "styled-components/native";
 
 export const DefaultContainer = styled.View`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;

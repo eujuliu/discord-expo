@@ -1,13 +1,16 @@
 import styled from "styled-components/native";
 
-interface FloatingLabelProps {
-  isFocused: boolean;
-  isNotEmpty: boolean;
+interface FloatingLabelContainerProps {
+  width: string;
 }
 
-export const CustomInputContainer = styled.View`
+interface FloatingLabelProps {
+  isFloating: boolean;
+}
+
+export const FloatingLabelContainer = styled.View<FloatingLabelContainerProps>`
   background-color: #202225;
-  width: 100%;
+  width: ${(props) => props.width};
   border-radius: 5px;
   padding: 13px;
   margin: 10px 0;
@@ -15,13 +18,11 @@ export const CustomInputContainer = styled.View`
 
 export const FloatingLabel = styled.Text<FloatingLabelProps>`
   position: absolute;
-  top: ${(props) => (props.isFocused || props.isNotEmpty ? 0 : "18px")};
+  top: ${(props) => (props.isFloating ? 0 : "18px")};
   left: 13px;
-  font-size: ${(props) =>
-    props.isFocused || props.isNotEmpty ? "10px" : "14px"};
-  color: ${(props) =>
-    props.isFocused || props.isNotEmpty ? "#9fa1a5" : "#fff"};
-  padding: ${(props) => (props.isFocused || props.isNotEmpty ? "5px" : 0)} 0;
+  font-size: ${(props) => (props.isFloating ? "10px" : "14px")};
+  color: ${(props) => (props.isFloating ? "#9fa1a5" : "#fff")};
+  padding: ${(props) => (props.isFloating ? "5px" : 0)} 0;
 `;
 
 export const Input = styled.TextInput`

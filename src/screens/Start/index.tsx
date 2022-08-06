@@ -4,7 +4,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Image, ImageBackground } from "react-native";
 
 import { RootStackParamList } from "@navigation";
-import { CustomButton } from "@components/CustomButton";
+import { CustomTouchable } from "@components/CustomTouchable";
 
 import { DefaultContainer } from "@assets/styles/global";
 import {
@@ -32,12 +32,12 @@ export function Start({ navigation }: StartScreenProps) {
           Join over 100 million people who use Discord to talk with communities
           and friends.
         </StartScreenText>
-        <CustomButton
+        <CustomTouchable
           title="Register"
           backgroundColor="#5865f2"
           onPress={() => navigation.navigate("SignUp")}
         />
-        <CustomButton
+        <CustomTouchable
           title="Login"
           backgroundColor="#4f545c"
           onPress={() => console.log("Login")}

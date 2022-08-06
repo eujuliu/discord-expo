@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 export const ImageStyled = styled.Image`
   width: 100%;
   height: 420px;
-  margin-top: 25px;
+  margin-top: 30px;
 `;
 
 export const StartScreenSection = styled.View`
@@ -11,6 +11,7 @@ export const StartScreenSection = styled.View`
   justify-content: center;
   align-items: center;
   width: 95%;
+  margin-top: 30px;
 `;
 
 export const WelcomeText = styled.Text`
@@ -25,5 +26,5 @@ export const StartScreenText = styled.Text`
   font-size: 13px;
   text-align: center;
   width: 85%;
-  margin: 10px 0 25px 0;
+  margin: 10px 0 20px 0;
 `;
