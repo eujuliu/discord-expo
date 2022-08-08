@@ -27,3 +27,10 @@ export const DefaultFormTitle = styled.Text`
   color: #fff;
   margin: 20px 0;
 `;
+
+export const DefaultFormContainer = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;

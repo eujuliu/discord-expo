@@ -1,12 +1,5 @@
 import styled from "styled-components/native";
 
-export const LoginForm = styled.View`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-`;
-
 export const LoginSmallText = styled.Text`
   color: #bbb;
   font-weight: 400;

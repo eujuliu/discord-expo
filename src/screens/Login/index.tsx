@@ -1,13 +1,19 @@
 import React from "react";
+import { Dimensions, ImageBackground, Linking } from "react-native";
 import { RootStackParamList } from "@navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
+
 import { ReturnButton } from "@components/ReturnButton";
-import { Dimensions, ImageBackground, Linking, Text } from "react-native";
-import { DefaultContainer, DefaultLink } from "@assets/styles/global";
 import { FloatingLabelInput } from "@components/FloatingLabelInput";
-import { LoginForm, LoginSmallText } from "./styles";
 import { CustomTouchable } from "@components/CustomTouchable";
-import { SignUpFormText } from "@screens/SignUp/styles";
+
+import {
+  DefaultContainer,
+  DefaultFormContainer,
+  DefaultFormTitle,
+  DefaultLink,
+} from "@assets/styles/global";
+import { LoginSmallText } from "./styles";
 
 interface LoginScreenProps
   extends NativeStackScreenProps<RootStackParamList, "Login"> {}
@@ -24,9 +30,9 @@ export function Login({ navigation }: LoginScreenProps) {
     >
       <DefaultContainer hasBackgroundColor={false}>
         <ReturnButton onPress={() => navigation.goBack()} />
-        <SignUpFormText>Welcome back!</SignUpFormText>
+        <DefaultFormTitle>Welcome back!</DefaultFormTitle>
         <LoginSmallText>We're so excited to see you again!</LoginSmallText>
-        <LoginForm>
+        <DefaultFormContainer>
           <FloatingLabelInput
             label="Email or Phone Number"
             type="email"
@@ -50,7 +56,7 @@ export function Login({ navigation }: LoginScreenProps) {
             Use a password manager?
           </DefaultLink>
           <CustomTouchable title="Login" backgroundColor="#5865f2" />
-        </LoginForm>
+        </DefaultFormContainer>
       </DefaultContainer>
     </ImageBackground>
   );

@@ -10,10 +10,11 @@ import { ReturnButton } from "@components/ReturnButton";
 
 import {
   DefaultContainer,
+  DefaultFormContainer,
   DefaultFormTitle,
   DefaultLink,
 } from "@assets/styles/global";
-import { PhoneNumberInputContainer, SignUpForm } from "./styles";
+import { PhoneNumberInputContainer } from "./styles";
 
 interface SignUpScreenProps
   extends NativeStackScreenProps<RootStackParamList, "SignUp"> {}
@@ -32,7 +33,7 @@ export function SignUp({ navigation }: SignUpScreenProps) {
     >
       <DefaultContainer hasBackgroundColor={false}>
         <ReturnButton onPress={() => navigation.goBack()} />
-        <SignUpForm>
+        <DefaultFormContainer>
           <DefaultFormTitle>Enter phone or email</DefaultFormTitle>
           <CustomSwitch
             value1="Phone"
@@ -67,8 +68,12 @@ export function SignUp({ navigation }: SignUpScreenProps) {
           >
             View our Privacy Policy
           </DefaultLink>
-          <CustomTouchable title="Next" backgroundColor="#5865f2" />
-        </SignUpForm>
+          <CustomTouchable
+            title="Next"
+            backgroundColor="#5865f2"
+            onPress={() => navigation.navigate("Register")}
+          />
+        </DefaultFormContainer>
       </DefaultContainer>
     </ImageBackground>
   );

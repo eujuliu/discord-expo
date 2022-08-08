@@ -21,7 +21,7 @@ export const FloatingLabel = styled.Text<FloatingLabelProps>`
   top: ${(props) => (props.isFloating ? 0 : "18px")};
   left: 13px;
   font-size: ${(props) => (props.isFloating ? "10px" : "14px")};
-  color: ${(props) => (props.isFloating ? "#9fa1a5" : "#fff")};
+  color: ${(props) => (props.isFloating ? "#9fa1a5" : "#a2a5a9")};
   padding: ${(props) => (props.isFloating ? "5px" : 0)} 0;
 `;
 

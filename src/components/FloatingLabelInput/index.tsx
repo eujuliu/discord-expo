@@ -13,7 +13,7 @@ import { Pressable } from "react-native";
 
 interface FloatingLabelInputProps extends TextInputProps {
   label: string;
-  type: "number" | "email" | "password" | "country-code";
+  type: "number" | "email" | "password" | "country-code" | "text";
   width: string;
 }
 
