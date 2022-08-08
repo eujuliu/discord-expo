@@ -1,7 +1,6 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { Image, ImageBackground } from "react-native";
 
 import { RootStackParamList } from "@navigation";
 import { CustomTouchable } from "@components/CustomTouchable";
@@ -19,7 +18,7 @@ interface StartScreenProps
 
 export function Start({ navigation }: StartScreenProps) {
   return (
-    <DefaultContainer>
+    <DefaultContainer hasBackgroundColor={true}>
       <StatusBar style="light" />
       <ImageStyled
         source={require("@assets/images/start-screen-art.png")}
@@ -40,7 +39,7 @@ export function Start({ navigation }: StartScreenProps) {
         <CustomTouchable
           title="Login"
           backgroundColor="#4f545c"
-          onPress={() => console.log("Login")}
+          onPress={() => navigation.navigate("Login")}
         />
       </StartScreenSection>
     </DefaultContainer>

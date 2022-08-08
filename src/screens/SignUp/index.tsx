@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Dimensions, ImageBackground, Linking } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "@navigation";
 
@@ -8,13 +9,11 @@ import { CustomSwitch } from "@components/CustomSwitch";
 import { ReturnButton } from "@components/ReturnButton";
 
 import {
-  PhoneNumberInputContainer,
-  SignUpForm,
-  SignUpFormText,
-  SignUpLink,
-  SignUpContainer,
-} from "./styles";
-import { Dimensions, ImageBackground, Linking } from "react-native";
+  DefaultContainer,
+  DefaultFormTitle,
+  DefaultLink,
+} from "@assets/styles/global";
+import { PhoneNumberInputContainer, SignUpForm } from "./styles";
 
 interface SignUpScreenProps
   extends NativeStackScreenProps<RootStackParamList, "SignUp"> {}
@@ -24,17 +23,17 @@ export function SignUp({ navigation }: SignUpScreenProps) {
 
   return (
     <ImageBackground
-      source={require("@assets/images/signup-screen.png")}
+      source={require("@assets/images/background-image.png")}
       style={{
         backgroundColor: "#36393f",
         width: Dimensions.get("window").width,
         height: Dimensions.get("window").height,
       }}
     >
-      <SignUpContainer>
+      <DefaultContainer hasBackgroundColor={false}>
         <ReturnButton onPress={() => navigation.goBack()} />
         <SignUpForm>
-          <SignUpFormText>Enter phone or email</SignUpFormText>
+          <DefaultFormTitle>Enter phone or email</DefaultFormTitle>
           <CustomSwitch
             value1="Phone"
             value2="Email"
@@ -52,19 +51,25 @@ export function SignUp({ navigation }: SignUpScreenProps) {
                 label="Phone Number"
                 type="number"
                 width="73%"
+                autoFocus={true}
               />
             </PhoneNumberInputContainer>
           ) : (
-            <FloatingLabelInput label="Email" type="email" width="100%" />
+            <FloatingLabelInput
+              label="Email"
+              type="email"
+              width="100%"
+              autoFocus={true}
+            />
           )}
-          <SignUpLink
+          <DefaultLink
             onPress={() => Linking.openURL("https://discord.com/privacy")}
           >
             View our Privacy Policy
-          </SignUpLink>
+          </DefaultLink>
           <CustomTouchable title="Next" backgroundColor="#5865f2" />
         </SignUpForm>
-      </SignUpContainer>
+      </DefaultContainer>
     </ImageBackground>
   );
 }

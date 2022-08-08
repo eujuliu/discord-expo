@@ -25,7 +25,15 @@ export const FloatingLabel = styled.Text<FloatingLabelProps>`
   padding: ${(props) => (props.isFloating ? "5px" : 0)} 0;
 `;
 
+export const InputWrapper = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`;
+
 export const Input = styled.TextInput`
   font-size: 14px;
   color: #fff;
+  flex-grow: 1;
 `;
