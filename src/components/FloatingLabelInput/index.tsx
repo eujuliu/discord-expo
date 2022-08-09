@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextInputProps } from "react-native";
+import { TextInputProps, Pressable } from "react-native";
 
 import { Ionicons } from "@expo/vector-icons";
 
@@ -9,11 +9,11 @@ import {
   Input,
   InputWrapper,
 } from "./styles";
-import { Pressable } from "react-native";
+import { ModalDatePicker } from "@components/ModalDatePicker";
 
 interface FloatingLabelInputProps extends TextInputProps {
   label: string;
-  type: "number" | "email" | "password" | "country-code" | "text";
+  type: "number" | "email" | "password" | "country-code" | "text" | "date";
   width: string;
 }
 
@@ -23,10 +23,30 @@ export function FloatingLabelInput({
   width,
   autoFocus,
 }: FloatingLabelInputProps) {
+  const [value, setValue] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
+  const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const [passwordVisibility, setPasswordVisibility] = useState(true);
 
-  const [isFocused, setIsFocused] = useState(false);
-  const [value, setValue] = useState("");
+  function showClearValueButton() {
+    return type !== "password" && value.length > 0 ? (
+      <Pressable onPress={() => setValue("")}>
+        <Ionicons name="close-circle" size={22} color="#b9bbbe" />
+      </Pressable>
+    ) : null;
+  }
+
+  function showEyeButtonOnPasswordType() {
+    return type === "password" ? (
+      <Pressable onPress={() => setPasswordVisibility(!passwordVisibility)}>
+        <Ionicons
+          name={passwordVisibility ? "eye" : "eye-off"}
+          size={22}
+          color="#b9bbbe"
+        />
+      </Pressable>
+    ) : null;
+  }
 
   return (
     <FloatingLabelContainer width={width}>
@@ -39,6 +59,7 @@ export function FloatingLabelInput({
         <Input
           onFocus={() => setIsFocused(!isFocused)}
           onBlur={() => setIsFocused(!isFocused)}
+          showSoftInputOnFocus={!(type === "date")}
           value={value}
           onChangeText={(newText) => setValue(newText)}
           keyboardType={
@@ -46,21 +67,18 @@ export function FloatingLabelInput({
           }
           autoFocus={autoFocus}
           secureTextEntry={passwordVisibility && type === "password"}
+          onPressOut={
+            type === "date"
+              ? () => setDatePickerVisibility(!isDatePickerVisible)
+              : null
+          }
         />
-        {type === "password" ? (
-          <Pressable onPress={() => setPasswordVisibility(!passwordVisibility)}>
-            <Ionicons
-              name={passwordVisibility ? "eye" : "eye-off"}
-              size={22}
-              color="#b9bbbe"
-            />
-          </Pressable>
-        ) : null}
-        {type !== "password" && value.length > 0 ? (
-          <Pressable onPress={() => setValue("")}>
-            <Ionicons name="close-circle" size={22} color="#b9bbbe" />
-          </Pressable>
-        ) : null}
+        {showEyeButtonOnPasswordType() || showClearValueButton()}
+        <ModalDatePicker
+          isDatePickerVisible={isDatePickerVisible}
+          setDatePickerVisibility={setDatePickerVisibility}
+          setValue={setValue}
+        />
       </InputWrapper>
     </FloatingLabelContainer>
   );

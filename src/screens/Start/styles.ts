@@ -10,7 +10,7 @@ export const StartScreenSection = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 95%;
+  width: 100%;
   margin-top: 30px;
 `;
 

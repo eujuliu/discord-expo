@@ -7,11 +7,10 @@ interface DefaultContainerProps {
 export const DefaultContainer = styled.View<DefaultContainerProps>`
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  flex: 1;
   background-color: ${(props) =>
     props.hasBackgroundColor ? "#2f3237" : undefined};
-  padding: 35px 10px 10px;
+  padding: 35px 15px 10px;
 `;
 
 export const DefaultLink = styled.Text`

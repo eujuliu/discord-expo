@@ -1,21 +1,23 @@
 import React from "react";
-import { Dimensions, ImageBackground, Text } from "react-native";
+import { Dimensions, ImageBackground } from "react-native";
 import { RootStackParamList } from "@navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
+
+import { FloatingLabelInput } from "@components/FloatingLabelInput";
+import { CustomTouchable } from "@components/CustomTouchable";
+import { ReturnButton } from "@components/ReturnButton";
+
 import {
   DefaultContainer,
   DefaultFormContainer,
   DefaultFormTitle,
 } from "@assets/styles/global";
-import { FloatingLabelInput } from "@components/FloatingLabelInput";
-import { CustomTouchable } from "@components/CustomTouchable";
-import { ReturnButton } from "@components/ReturnButton";
 import { RegisterBoldText, RegisterSmallText } from "./styles";
 
 interface RegisterScreenProps
   extends NativeStackScreenProps<RootStackParamList, "Register"> {}
 
-export function Register({}: RegisterScreenProps) {
+export function Register({ navigation }: RegisterScreenProps) {
   return (
     <ImageBackground
       source={require("@assets/images/background-image.png")}
@@ -26,7 +28,7 @@ export function Register({}: RegisterScreenProps) {
       }}
     >
       <DefaultContainer hasBackgroundColor={false}>
-        <ReturnButton />
+        <ReturnButton onPress={() => navigation.goBack()} />
         <DefaultFormContainer>
           <DefaultFormTitle>Register</DefaultFormTitle>
           <RegisterBoldText>WHAT SHOULD EVERYONE CALL YOU?</RegisterBoldText>
@@ -40,7 +42,11 @@ export function Register({}: RegisterScreenProps) {
             You can always change this later!
           </RegisterSmallText>
           <FloatingLabelInput label="Password" type="password" width="100%" />
-          <CustomTouchable title="Next" backgroundColor="#5865f2" />
+          <CustomTouchable
+            title="Next"
+            backgroundColor="#5865f2"
+            onPress={() => navigation.navigate("Birthday")}
+          />
         </DefaultFormContainer>
       </DefaultContainer>
     </ImageBackground>

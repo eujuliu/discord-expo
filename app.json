@@ -17,6 +17,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#8c9eff"
       }
-    }
+    },
+    "userInterfaceStyle": "automatic"
   }
 }
