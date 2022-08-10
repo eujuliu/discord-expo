@@ -49,6 +49,7 @@ export function Birthday({ navigation }: BirthdayScreenProps) {
           <CustomTouchable
             title="Create an account"
             backgroundColor="#5865f2"
+            onPress={() => navigation.navigate("Captcha")}
           />
         </DefaultFormContainer>
       </DefaultContainer>

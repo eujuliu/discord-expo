@@ -22,6 +22,7 @@ export const CustomSwitchTouchable = styled.TouchableOpacity`
 
 export const CustomSwitchText = styled.Text<CustomSwitchTextProps>`
   text-align: center;
+  font-family: Uni-Sans-Regular;
   font-weight: 600;
   width: 100%;
   padding: 10px;

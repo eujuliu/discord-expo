@@ -4,6 +4,7 @@ export const LoginSmallText = styled.Text`
   color: #bbb;
   font-weight: 400;
   font-size: 13px;
+  font-family: Uni-Sans-Regular;
   text-align: center;
   width: 85%;
   margin: -15px 0 10px;

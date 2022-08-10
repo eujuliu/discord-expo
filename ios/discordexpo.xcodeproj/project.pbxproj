@@ -14,6 +14,13 @@
 		96905EF65AED1B983A6B3ABC /* libPods-discordexpo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-discordexpo.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		A4113202A0FA42468543640C /* Uni-Sans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22713B8BE19748DD98AC8966 /* Uni-Sans-Bold.ttf */; };
+		F1955F53C8414C9697D02537 /* Uni-Sans-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B46F3937B65475B8B71E6F9 /* Uni-Sans-Book.ttf */; };
+		CFEFD46C2A5042B6BFE68970 /* Uni-Sans-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE159E930ABE4515876F5E2C /* Uni-Sans-Heavy.ttf */; };
+		4F9FDA477A6D4D17A5B16993 /* Uni-Sans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05287707C0F447C288A7C3E8 /* Uni-Sans-Light.ttf */; };
+		4BFB361BA77946D4892C927F /* Uni-Sans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1A7E0D2C9074E4E9EDB91A6 /* Uni-Sans-Regular.ttf */; };
+		7D13934F5BB0402FBF777BAB /* Uni-Sans-Semi-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 932ADC5AC3DE4A52A83CDC7E /* Uni-Sans-Semi-Bold.ttf */; };
+		2F9923C30E6D4511912D1CFC /* Uni-Sans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B858BFDDAC43D7880DC189 /* Uni-Sans-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +38,13 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-discordexpo/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		22713B8BE19748DD98AC8966 /* Uni-Sans-Bold.ttf */ = {isa = PBXFileReference; name = "Uni-Sans-Bold.ttf"; path = "../assets/fonts/Uni-Sans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6B46F3937B65475B8B71E6F9 /* Uni-Sans-Book.ttf */ = {isa = PBXFileReference; name = "Uni-Sans-Book.ttf"; path = "../assets/fonts/Uni-Sans-Book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE159E930ABE4515876F5E2C /* Uni-Sans-Heavy.ttf */ = {isa = PBXFileReference; name = "Uni-Sans-Heavy.ttf"; path = "../assets/fonts/Uni-Sans-Heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		05287707C0F447C288A7C3E8 /* Uni-Sans-Light.ttf */ = {isa = PBXFileReference; name = "Uni-Sans-Light.ttf"; path = "../assets/fonts/Uni-Sans-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C1A7E0D2C9074E4E9EDB91A6 /* Uni-Sans-Regular.ttf */ = {isa = PBXFileReference; name = "Uni-Sans-Regular.ttf"; path = "../assets/fonts/Uni-Sans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		932ADC5AC3DE4A52A83CDC7E /* Uni-Sans-Semi-Bold.ttf */ = {isa = PBXFileReference; name = "Uni-Sans-Semi-Bold.ttf"; path = "../assets/fonts/Uni-Sans-Semi-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		29B858BFDDAC43D7880DC189 /* Uni-Sans-Thin.ttf */ = {isa = PBXFileReference; name = "Uni-Sans-Thin.ttf"; path = "../assets/fonts/Uni-Sans-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +99,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
+				16E2DFBC03F247A2AFC7BA4E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -132,6 +147,21 @@
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
+		};
+		16E2DFBC03F247A2AFC7BA4E /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				22713B8BE19748DD98AC8966 /* Uni-Sans-Bold.ttf */,
+				6B46F3937B65475B8B71E6F9 /* Uni-Sans-Book.ttf */,
+				DE159E930ABE4515876F5E2C /* Uni-Sans-Heavy.ttf */,
+				05287707C0F447C288A7C3E8 /* Uni-Sans-Light.ttf */,
+				C1A7E0D2C9074E4E9EDB91A6 /* Uni-Sans-Regular.ttf */,
+				932ADC5AC3DE4A52A83CDC7E /* Uni-Sans-Semi-Bold.ttf */,
+				29B858BFDDAC43D7880DC189 /* Uni-Sans-Thin.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -196,6 +226,13 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
+				A4113202A0FA42468543640C /* Uni-Sans-Bold.ttf in Resources */,
+				F1955F53C8414C9697D02537 /* Uni-Sans-Book.ttf in Resources */,
+				CFEFD46C2A5042B6BFE68970 /* Uni-Sans-Heavy.ttf in Resources */,
+				4F9FDA477A6D4D17A5B16993 /* Uni-Sans-Light.ttf in Resources */,
+				4BFB361BA77946D4892C927F /* Uni-Sans-Regular.ttf in Resources */,
+				7D13934F5BB0402FBF777BAB /* Uni-Sans-Semi-Bold.ttf in Resources */,
+				2F9923C30E6D4511912D1CFC /* Uni-Sans-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

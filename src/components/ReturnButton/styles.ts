@@ -14,6 +14,7 @@ export const Touchable = styled.TouchableOpacity`
 
 export const ReturnButtonText = styled.Text`
   font-size: 15px;
+  font-family: Uni-Sans-Regular;
   color: #ddd;
   margin-left: 3px;
 `;
