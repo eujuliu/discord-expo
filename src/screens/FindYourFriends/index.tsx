@@ -1,9 +1,13 @@
 import React from "react";
+import { Image, Linking, TouchableOpacity } from "react-native";
 
 import { RootStackParamList } from "@navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
+
+import { CustomMiniTouchable } from "@components/CustomMiniTouchable";
+import { CustomCheckBox } from "@components/CustomCheckBox";
+
 import { DefaultContainer, DefaultScreenTitle } from "@assets/styles/global";
-import { Image, Linking, Text, TouchableOpacity, View } from "react-native";
 import {
   FindYourFriendsLink,
   FindYourFriendsSection,
@@ -11,8 +15,6 @@ import {
   SkipButtonContainer,
   SkipButtonText,
 } from "./styles";
-import { CustomMiniTouchable } from "@components/CustomMiniTouchable";
-import { CustomCheckBox } from "@components/CustomCheckBox";
 
 interface FindYourFriendsScreenProps
   extends NativeStackScreenProps<RootStackParamList, "FindYourFriends"> {}

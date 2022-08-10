@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
+import { TouchableOpacityProps } from "react-native";
 
 import { Ionicons } from "@expo/vector-icons";
+
 import { CheckBoxText, CheckBoxTouchable } from "./styles";
 
 interface CustomCheckBoxProps extends TouchableOpacityProps {
