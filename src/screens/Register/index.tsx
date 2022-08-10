@@ -10,7 +10,7 @@ import { ReturnButton } from "@components/ReturnButton";
 import {
   DefaultContainer,
   DefaultFormContainer,
-  DefaultFormTitle,
+  DefaultScreenTitle,
 } from "@assets/styles/global";
 import { RegisterBoldText, RegisterSmallText } from "./styles";
 
@@ -30,7 +30,7 @@ export function Register({ navigation }: RegisterScreenProps) {
       <DefaultContainer hasBackgroundColor={false}>
         <ReturnButton onPress={() => navigation.goBack()} />
         <DefaultFormContainer>
-          <DefaultFormTitle>Register</DefaultFormTitle>
+          <DefaultScreenTitle>Register</DefaultScreenTitle>
           <RegisterBoldText>WHAT SHOULD EVERYONE CALL YOU?</RegisterBoldText>
           <FloatingLabelInput
             label="Username"

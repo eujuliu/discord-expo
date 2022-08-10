@@ -1,7 +1,7 @@
 import {
   DefaultContainer,
   DefaultFormContainer,
-  DefaultFormTitle,
+  DefaultScreenTitle,
   DefaultLink,
 } from "@assets/styles/global";
 import { CustomTouchable } from "@components/CustomTouchable";
@@ -29,7 +29,7 @@ export function Birthday({ navigation }: BirthdayScreenProps) {
       <DefaultContainer hasBackgroundColor={false}>
         <ReturnButton onPress={() => navigation.goBack()} />
         <DefaultFormContainer>
-          <DefaultFormTitle>Enter your birthday</DefaultFormTitle>
+          <DefaultScreenTitle>Enter your birthday</DefaultScreenTitle>
           <FloatingLabelInput label="Date of Birth" type="date" width="100%" />
           <BirthdaySmallText>
             By registering, you agree to Discord's{" "}

@@ -11,7 +11,7 @@ import { ReturnButton } from "@components/ReturnButton";
 import {
   DefaultContainer,
   DefaultFormContainer,
-  DefaultFormTitle,
+  DefaultScreenTitle,
   DefaultLink,
 } from "@assets/styles/global";
 import { PhoneNumberInputContainer } from "./styles";
@@ -34,7 +34,7 @@ export function SignUp({ navigation }: SignUpScreenProps) {
       <DefaultContainer hasBackgroundColor={false}>
         <ReturnButton onPress={() => navigation.goBack()} />
         <DefaultFormContainer>
-          <DefaultFormTitle>Enter phone or email</DefaultFormTitle>
+          <DefaultScreenTitle>Enter phone or email</DefaultScreenTitle>
           <CustomSwitch
             value1="Phone"
             value2="Email"

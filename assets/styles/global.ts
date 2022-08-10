@@ -2,6 +2,7 @@ import styled from "styled-components/native";
 
 interface DefaultContainerProps {
   hasBackgroundColor: boolean;
+  extraStyles?: string;
 }
 
 export const DefaultContainer = styled.View<DefaultContainerProps>`
@@ -11,6 +12,7 @@ export const DefaultContainer = styled.View<DefaultContainerProps>`
   background-color: ${(props) =>
     props.hasBackgroundColor ? "#36393f" : undefined};
   padding: 35px 15px 10px;
+  ${(props) => props.extraStyles}
 `;
 
 export const DefaultLink = styled.Text`
@@ -21,7 +23,7 @@ export const DefaultLink = styled.Text`
   margin-bottom: 10px;
 `;
 
-export const DefaultFormTitle = styled.Text`
+export const DefaultScreenTitle = styled.Text`
   font-size: 24px;
   font-weight: bold;
   font-family: Uni-Sans-Regular;

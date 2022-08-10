@@ -8,6 +8,7 @@ import { Login } from "@screens/Login";
 import { Register } from "@screens/Register";
 import { Birthday } from "@screens/Birthday";
 import { Captcha } from "@screens/Captcha";
+import { FindYourFriends } from "@screens/FindYourFriends";
 
 export interface RootStackParamList extends ParamListBase {
   Start: undefined;
@@ -16,6 +17,7 @@ export interface RootStackParamList extends ParamListBase {
   Register: undefined;
   Birthday: undefined;
   Captcha: undefined;
+  FindYourFriends: undefined;
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -33,6 +35,7 @@ export function Navigation() {
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Birthday" component={Birthday} />
         <Stack.Screen name="Captcha" component={Captcha} />
+        <Stack.Screen name="FindYourFriends" component={FindYourFriends} />
       </Stack.Navigator>
     </NavigationContainer>
   );

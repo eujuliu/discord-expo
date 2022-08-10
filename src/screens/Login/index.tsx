@@ -10,7 +10,7 @@ import { CustomTouchable } from "@components/CustomTouchable";
 import {
   DefaultContainer,
   DefaultFormContainer,
-  DefaultFormTitle,
+  DefaultScreenTitle,
   DefaultLink,
 } from "@assets/styles/global";
 import { LoginSmallText } from "./styles";
@@ -30,7 +30,7 @@ export function Login({ navigation }: LoginScreenProps) {
     >
       <DefaultContainer hasBackgroundColor={false}>
         <ReturnButton onPress={() => navigation.goBack()} />
-        <DefaultFormTitle>Welcome back!</DefaultFormTitle>
+        <DefaultScreenTitle>Welcome back!</DefaultScreenTitle>
         <LoginSmallText>We're so excited to see you again!</LoginSmallText>
         <DefaultFormContainer>
           <FloatingLabelInput

@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import { Modal } from "react-native";
-
 import DatePicker from "react-native-date-picker";
 
-import {
-  ModalContainer,
-  ModalPressable,
-  ModalSubmitButton,
-  ModalSubmitButtonText,
-  ModalTitle,
-} from "./styles";
+import { CustomMiniTouchable } from "@components/CustomMiniTouchable";
+
+import { ModalContainer, ModalPressable, ModalTitle } from "./styles";
 
 interface ModalDatePicker {
   isDatePickerVisible: boolean;
@@ -51,16 +46,15 @@ export function ModalDatePicker({
           style={{ width: 250 }}
           androidVariant="nativeAndroid"
         />
-        <ModalSubmitButton
+        <CustomMiniTouchable
+          title="Done"
           onPress={() => {
             setValue(
               date.toLocaleDateString("default", { timeStyle: "short" })
             );
             setDatePickerVisibility(!isDatePickerVisible);
           }}
-        >
-          <ModalSubmitButtonText>Done</ModalSubmitButtonText>
-        </ModalSubmitButton>
+        ></CustomMiniTouchable>
       </ModalContainer>
     </Modal>
   );

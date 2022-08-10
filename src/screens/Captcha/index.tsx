@@ -31,7 +31,11 @@ export function Captcha({ navigation }: CaptchaScreenProps) {
       >
         Having issues with CAPTCHA?
       </CaptchaLink>
-      <CustomTouchable title="Verify" backgroundColor="#5865f2" />
+      <CustomTouchable
+        title="Verify"
+        backgroundColor="#5865f2"
+        onPress={() => navigation.navigate("FindYourFriends")}
+      />
     </DefaultContainer>
   );
 }

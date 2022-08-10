@@ -15,7 +15,7 @@ export const ModalContainer = styled.View`
   justify-content: space-around;
   align-items: center;
 
-  padding: 8px 0;
+  padding: 8px;
   width: 250px;
   height: 300px;
   background-color: #36393f;
@@ -30,23 +30,4 @@ export const ModalTitle = styled.Text`
   text-align: center;
   color: #fff;
   width: 100%;
-`;
-
-export const ModalSubmitButton = styled.TouchableOpacity`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 90%;
-  border-radius: 5px;
-  background-color: #5865f2;
-  margin: 0 auto;
-  padding: 10px;
-`;
-
-export const ModalSubmitButtonText = styled.Text`
-  color: #fff;
-  font-size: 15px;
-  font-weight: bold;
-  font-family: Uni-Sans-Regular;
 `;
