@@ -9,6 +9,8 @@ import { Register } from "@screens/Register";
 import { Birthday } from "@screens/Birthday";
 import { Captcha } from "@screens/Captcha";
 import { FindYourFriends } from "@screens/FindYourFriends";
+import { CreateYourServer } from "@screens/CreateYourServer";
+import { Home } from "@screens/Home";
 
 export interface RootStackParamList extends ParamListBase {
   Start: undefined;
@@ -18,6 +20,8 @@ export interface RootStackParamList extends ParamListBase {
   Birthday: undefined;
   Captcha: undefined;
   FindYourFriends: undefined;
+  CreateYourServer: undefined;
+  Home: undefined;
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -36,6 +40,8 @@ export function Navigation() {
         <Stack.Screen name="Birthday" component={Birthday} />
         <Stack.Screen name="Captcha" component={Captcha} />
         <Stack.Screen name="FindYourFriends" component={FindYourFriends} />
+        <Stack.Screen name="CreateYourServer" component={CreateYourServer} />
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );

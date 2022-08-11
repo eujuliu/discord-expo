@@ -35,7 +35,13 @@ export function CustomList({ data }: CustomListProps) {
       <CustomListText>START FROM A TEMPLATE</CustomListText>
       {data.map((value, index) => {
         if (index === 0) return;
-        return <CustomListItem image={value.image} label={value.label} />;
+        return (
+          <CustomListItem
+            key={value.label}
+            image={value.image}
+            label={value.label}
+          />
+        );
       })}
     </ScrollView>
   );
@@ -43,7 +49,7 @@ export function CustomList({ data }: CustomListProps) {
 
 export function CustomListItem({ image, label }: CustomListItemProps) {
   return (
-    <ListTouchable key={label}>
+    <ListTouchable>
       <ListTouchableContainer>
         <Image
           source={{

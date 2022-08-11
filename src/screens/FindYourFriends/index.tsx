@@ -26,7 +26,9 @@ export function FindYourFriends({ navigation }: FindYourFriendsScreenProps) {
       extraStyles={"justify-content: space-between"}
     >
       <SkipButtonContainer>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("CreateYourServer")}
+        >
           <SkipButtonText>SKIP</SkipButtonText>
         </TouchableOpacity>
       </SkipButtonContainer>

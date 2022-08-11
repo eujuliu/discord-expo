@@ -1,17 +1,21 @@
 import styled from "styled-components/native";
 
+interface MiniTouchableProps {
+  backgroundColor?: string;
+}
+
 interface MiniTouchableTextProps {
   fontSize?: string;
 }
 
-export const MiniTouchable = styled.TouchableOpacity`
+export const MiniTouchable = styled.TouchableOpacity<MiniTouchableProps>`
   display: flex;
   justify-content: center;
   align-items: center;
 
   width: 100%;
   border-radius: 5px;
-  background-color: #5865f2;
+  background-color: ${(props) => props.backgroundColor || "#5865f2"};
   margin: 0 auto;
   padding: 10px;
 `;
