@@ -5,6 +5,10 @@ interface DefaultContainerProps {
   extraStyles?: string;
 }
 
+interface DefaultScreenTitleProps {
+  margin?: string;
+}
+
 export const DefaultContainer = styled.View<DefaultContainerProps>`
   display: flex;
   align-items: center;
@@ -23,12 +27,12 @@ export const DefaultLink = styled.Text`
   margin-bottom: 10px;
 `;
 
-export const DefaultScreenTitle = styled.Text`
+export const DefaultScreenTitle = styled.Text<DefaultScreenTitleProps>`
   font-size: 24px;
   font-weight: bold;
   font-family: Uni-Sans-Regular;
   color: #fff;
-  margin: 20px 0;
+  margin: ${(props) => props.margin || "20px 0"};
   font-family: UniSansRegular;
 `;
 
