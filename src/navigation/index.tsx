@@ -11,6 +11,7 @@ import { Captcha } from "@screens/Captcha";
 import { FindYourFriends } from "@screens/FindYourFriends";
 import { CreateYourServer } from "@screens/CreateYourServer";
 import { Home } from "@screens/Home";
+import { StatusBar } from "expo-status-bar";
 
 export interface RootStackParamList extends ParamListBase {
   Start: undefined;
@@ -29,6 +30,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export function Navigation() {
   return (
     <NavigationContainer>
+      <StatusBar style="auto" backgroundColor="#202225" />
       <Stack.Navigator
         initialRouteName="Start"
         screenOptions={{ headerShown: false }}

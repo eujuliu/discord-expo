@@ -21,5 +21,4 @@ export const CustomTouchableText = styled.Text`
   color: #fff;
   font-weight: bold;
   font-size: 15px;
-  font-family: Uni-Sans-Regular;
 `;

@@ -26,7 +26,6 @@ export const ModalContainer = styled.View`
 export const ModalTitle = styled.Text`
   font-size: 22px;
   font-weight: bold;
-  font-family: Uni-Sans-Regular;
   text-align: center;
   color: #fff;
   width: 100%;

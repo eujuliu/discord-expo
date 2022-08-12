@@ -17,7 +17,6 @@ export const StartScreenSection = styled.View`
 export const WelcomeText = styled.Text`
   font-size: 28px;
   font-weight: bold;
-  font-family: Uni-Sans-Regular;
   color: #fff;
 `;
 
@@ -25,7 +24,6 @@ export const StartScreenText = styled.Text`
   color: #bbb;
   font-weight: 400;
   font-size: 13px;
-  font-family: Uni-Sans-Regular;
   text-align: center;
   width: 85%;
   margin: 10px 0 20px 0;

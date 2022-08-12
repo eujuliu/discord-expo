@@ -16,7 +16,6 @@ export const SkipButtonContainer = styled.View`
 
 export const SkipButtonText = styled.Text`
   color: #f6f6f7;
-  font-family: "Uni-Sans-Regular";
   font-weight: 700;
 `;
 
@@ -31,7 +30,6 @@ export const FindYourFriendsSmallText = styled.Text<FindYourFriendsSmallTextProp
   color: #bbb;
   font-weight: 400;
   font-size: ${(props) => props.fontSize || 13}px;
-  font-family: Uni-Sans-Regular;
   text-align: ${(props) => props.textAlign || "center"};
   width: ${(props) => props.width || 95}%;
   margin: ${(props) => props.margin || "-13px 0 10px 0"};
@@ -39,7 +37,6 @@ export const FindYourFriendsSmallText = styled.Text<FindYourFriendsSmallTextProp
 
 export const FindYourFriendsLink = styled.Text`
   font-size: 11.2px;
-  font-family: Uni-Sans-Regular;
   color: #01aef1;
   width: 100%;
   text-align: center;

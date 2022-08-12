@@ -13,6 +13,5 @@ export const CheckBoxTouchable = styled.TouchableOpacity`
 export const CheckBoxText = styled.Text`
   font-size: 16px;
   font-weight: bold;
-  font-family: Uni-Sans-Regular;
   color: #f6f6f7;
 `;

@@ -1,5 +1,4 @@
 import React from "react";
-import { StatusBar } from "expo-status-bar";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 import { RootStackParamList } from "@navigation";
@@ -19,7 +18,6 @@ interface StartScreenProps
 export function Start({ navigation }: StartScreenProps) {
   return (
     <DefaultContainer hasBackgroundColor={true}>
-      <StatusBar style="light" />
       <ImageStyled
         source={require("@assets/images/start-screen-art.png")}
         accessibilityLabel="Discord"

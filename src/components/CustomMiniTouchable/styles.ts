@@ -24,5 +24,4 @@ export const MiniTouchableText = styled.Text<MiniTouchableTextProps>`
   color: #fff;
   font-size: ${(props) => props.fontSize || "15px"};
   font-weight: bold;
-  font-family: Uni-Sans-Regular;
 `;

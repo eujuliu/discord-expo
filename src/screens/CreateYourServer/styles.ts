@@ -9,7 +9,6 @@ export const CreateYourServerSmallText = styled.Text`
   color: #bbb;
   font-weight: 600;
   font-size: 13.8px;
-  font-family: Uni-Sans-Regular;
   text-align: center;
   width: 98%;
   margin-bottom: 10px;
@@ -30,7 +29,6 @@ export const CreateYourServerFooter = styled.View`
 
 export const CreateYourServerFooterText = styled.Text`
   color: #dcddde;
-  font-family: Uni-Sans-Regular;
   font-size: 20px;
   font-weight: bold;
   margin: 15px 0 20px;

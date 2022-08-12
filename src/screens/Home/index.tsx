@@ -12,7 +12,7 @@ interface HomeScreenProps
 export function Home({}: HomeScreenProps) {
   return (
     <DefaultContainer hasBackgroundColor={true}>
-      <Text>Home</Text>
+      <Text style={{ fontFamily: "Uni-Sans-Semi-bold" }}>Home</Text>
     </DefaultContainer>
   );
 }

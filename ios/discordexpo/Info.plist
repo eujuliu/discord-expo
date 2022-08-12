@@ -52,14 +52,6 @@
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleDefault</string>
 	<key>UIAppFonts</key>
-	<array>
-		<string>Uni-Sans-Bold.ttf</string>
-		<string>Uni-Sans-Book.ttf</string>
-		<string>Uni-Sans-Heavy.ttf</string>
-		<string>Uni-Sans-Light.ttf</string>
-		<string>Uni-Sans-Regular.ttf</string>
-		<string>Uni-Sans-Semi-Bold.ttf</string>
-		<string>Uni-Sans-Thin.ttf</string>
-	</array>
+	<array/>
 </dict>
 </plist>

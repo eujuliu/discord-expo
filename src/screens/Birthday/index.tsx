@@ -1,16 +1,19 @@
+import React from "react";
+import { Dimensions, ImageBackground, Linking } from "react-native";
+
+import { RootStackParamList } from "@navigation";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+
+import { CustomTouchable } from "@components/CustomTouchable";
+import { FloatingLabelInput } from "@components/FloatingLabelInput";
+import { ReturnButton } from "@components/ReturnButton";
+
 import {
   DefaultContainer,
   DefaultFormContainer,
   DefaultScreenTitle,
   DefaultLink,
 } from "@assets/styles/global";
-import { CustomTouchable } from "@components/CustomTouchable";
-import { FloatingLabelInput } from "@components/FloatingLabelInput";
-import { ReturnButton } from "@components/ReturnButton";
-import { RootStackParamList } from "@navigation";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import React from "react";
-import { Dimensions, ImageBackground, Linking, Text } from "react-native";
 import { BirthdaySmallText } from "./styles";
 
 interface BirthdayScreenProps
