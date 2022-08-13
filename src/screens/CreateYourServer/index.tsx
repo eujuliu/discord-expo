@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { RootStackParamList } from "@navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-import { CustomList } from "@components/CustomList";
+import { ServerCategoryList } from "@components/ServerCategoryList";
 import { CustomMiniTouchable } from "@components/CustomMiniTouchable";
 
 import { DefaultContainer, DefaultScreenTitle } from "@assets/styles/global";
@@ -46,7 +46,7 @@ export function CreateYourServer({ navigation }: CreateYourServerProps) {
         talking.
       </CreateYourServerSmallText>
       <CreateYourServerOptions>
-        <CustomList data={customListData} />
+        <ServerCategoryList data={customListData} />
       </CreateYourServerOptions>
       <CreateYourServerFooter>
         <CreateYourServerFooterText>

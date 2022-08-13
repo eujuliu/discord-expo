@@ -5,9 +5,9 @@ import { RootStackParamList } from "@navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 import { ReturnButton } from "@components/ReturnButton";
+import { CustomTouchable } from "@components/CustomTouchable";
 
 import { DefaultContainer } from "@assets/styles/global";
-import { CustomTouchable } from "@components/CustomTouchable";
 import { CaptchaLink, CaptchaSmallText, CaptchaTitle } from "./styles";
 
 interface CaptchaScreenProps

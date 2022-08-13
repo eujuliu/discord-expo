@@ -1,14 +1,6 @@
 import styled from "styled-components/native";
 
-export const CustomListText = styled.Text`
-  color: #b9bbbe;
-  font-size: 12px;
-  font-weight: bold;
-  width: 100%;
-  margin: 3px 0 10px;
-`;
-
-export const ListTouchable = styled.TouchableOpacity`
+export const ServerCategoryItemTouchable = styled.TouchableOpacity`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,14 +13,14 @@ export const ListTouchable = styled.TouchableOpacity`
   width: 100%;
 `;
 
-export const ListTouchableContainer = styled.View`
+export const ServerCategoryItemContainer = styled.View`
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-grow: 1;
 `;
 
-export const ListTouchableText = styled.Text`
+export const ServerCategoryItemText = styled.Text`
   color: #dcddde;
   font-size: 15px;
   font-weight: bold;

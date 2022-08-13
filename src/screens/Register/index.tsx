@@ -1,5 +1,6 @@
 import React from "react";
 import { Dimensions, ImageBackground } from "react-native";
+
 import { RootStackParamList } from "@navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 

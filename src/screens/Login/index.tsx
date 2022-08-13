@@ -1,5 +1,6 @@
 import React from "react";
 import { Dimensions, ImageBackground, Linking } from "react-native";
+
 import { RootStackParamList } from "@navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
@@ -55,7 +56,11 @@ export function Login({ navigation }: LoginScreenProps) {
           >
             Use a password manager?
           </DefaultLink>
-          <CustomTouchable title="Login" backgroundColor="#5865f2" />
+          <CustomTouchable
+            title="Login"
+            backgroundColor="#5865f2"
+            onPress={() => navigation.navigate("Home")}
+          />
         </DefaultFormContainer>
       </DefaultContainer>
     </ImageBackground>
