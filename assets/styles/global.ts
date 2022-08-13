@@ -2,7 +2,6 @@ import styled from "styled-components/native";
 
 interface DefaultContainerProps {
   hasBackgroundColor: boolean;
-  padding?: string;
   extraStyles?: string;
 }
 
@@ -16,7 +15,7 @@ export const DefaultContainer = styled.View<DefaultContainerProps>`
   flex: 1;
   background-color: ${(props) =>
     props.hasBackgroundColor ? "#36393f" : undefined};
-  padding: ${(props) => props.padding || "35px 15px 10px"};
+  padding: 35px 15px 10px;
   ${(props) => props.extraStyles}
 `;
 
