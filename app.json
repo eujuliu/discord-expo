@@ -3,7 +3,7 @@
     "name": "discord-expo",
     "slug": "discord-expo",
     "version": "1.0.0",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icons/icon.png",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -14,7 +14,7 @@
     ],
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/icons/adaptive-icon.png",
         "backgroundColor": "#8c9eff"
       }
     },

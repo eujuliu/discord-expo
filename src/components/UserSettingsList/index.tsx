@@ -26,7 +26,7 @@ export function UserSettingsList({ headerText, data }: UserSettingsListProps) {
           <UserSettingsTouchable key={value.label}>
             <Image
               source={{
-                uri: `https://raw.githubusercontent.com/jjuliomarttins/discord-expo/main/assets/images/${value.icon}`,
+                uri: `https://raw.githubusercontent.com/jjuliomarttins/discord-expo/main/assets/icons/${value.icon}`,
               }}
               accessibilityLabel={value.label}
               style={{ width: 25, height: 25, marginRight: 25 }}

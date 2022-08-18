@@ -18,7 +18,7 @@ export function HeaderButtons({ data }: HeaderButtonsProps) {
           <HeaderButton key={button.label}>
             <HeaderButtonIcon
               source={{
-                uri: `https://raw.githubusercontent.com/jjuliomarttins/discord-expo/main/assets/images/${button.icon}`,
+                uri: `https://raw.githubusercontent.com/jjuliomarttins/discord-expo/main/assets/icons/${button.icon}`,
               }}
               accessibilityLabel={button.label}
             />
