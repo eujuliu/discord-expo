@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 import { RootStackParamList } from "@navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
@@ -10,6 +10,10 @@ import { HeaderButtons } from "@components/HeaderButtons";
 import { ServerList } from "./ServerList";
 import { UserSettings } from "./UserSettings";
 import { Friends } from "./Friends";
+
+import { TabBarFriendsIcon } from "@assets/icons/TabBarFriendsIcon";
+import { TabBarSettingsIcon } from "@assets/icons/TabBarSettingsIcon";
+import { TabBarServersIcon } from "@assets/icons/TabBarServersIcon";
 
 interface HomeScreenProps
   extends NativeStackScreenProps<RootStackParamList, "Home"> {}
@@ -24,7 +28,10 @@ export function Home({}: HomeScreenProps) {
   ];
 
   const settingButtonData = [
-    { icon: "leave-icon.png", label: "Leave" },
+    {
+      icon: "leave-icon.png",
+      label: "Leave",
+    },
     { icon: "three-points-icon.png", label: "Extra Settings" },
   ];
 
@@ -42,7 +49,13 @@ export function Home({}: HomeScreenProps) {
         },
       }}
     >
-      <Tab.Screen name="ServerList" component={ServerList} />
+      <Tab.Screen
+        name="ServerList"
+        component={ServerList}
+        options={{
+          tabBarIcon: ({ focused }) => <TabBarServersIcon focused={focused} />,
+        }}
+      />
       <Tab.Screen
         name="Friends"
         component={Friends}
@@ -55,6 +68,7 @@ export function Home({}: HomeScreenProps) {
           },
           headerTitleStyle: { color: "#fff" },
           headerRight: () => <HeaderButtons data={friendsButtonData} />,
+          tabBarIcon: ({ focused }) => <TabBarFriendsIcon focused={focused} />,
         }}
       />
       <Tab.Screen
@@ -69,6 +83,7 @@ export function Home({}: HomeScreenProps) {
           },
           headerTitleStyle: { color: "#fff" },
           headerRight: () => <HeaderButtons data={settingButtonData} />,
+          tabBarIcon: ({ focused }) => <TabBarSettingsIcon focused={focused} />,
         }}
       />
     </Tab.Navigator>

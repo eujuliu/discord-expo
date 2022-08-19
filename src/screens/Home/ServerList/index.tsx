@@ -18,7 +18,13 @@ import {
   ServerListSmallText,
 } from "./styles";
 
-export function ServerList() {
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "@navigation";
+
+interface ServerListProps
+  extends NativeStackScreenProps<RootStackParamList, "Home"> {}
+
+export function ServerList({ navigation }: ServerListProps) {
   return (
     <DefaultContainer
       hasBackgroundColor={true}
@@ -35,7 +41,9 @@ export function ServerList() {
           />
         </ServerListMessagesTouchable>
         <ServerListDivider />
-        <NewServerButton>
+        <NewServerButton
+          onPress={() => navigation.navigate("CreateYourServer")}
+        >
           <Ionicons name="add" size={27} color="#3ba55c" />
         </NewServerButton>
         <ServerListDivider />
