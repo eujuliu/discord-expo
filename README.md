@@ -10,6 +10,7 @@
 - [Preview](#preview)
 - [Technologies](#technologies)
 - [Installation](#installation)
+- [Download Android Package](#download-android-package)
 - [Author](#author)
 
 ## Preview
