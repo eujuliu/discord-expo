@@ -10,20 +10,17 @@
 - [Preview](#preview)
 - [Technologies](#technologies)
 - [Installation](#installation)
+  - [Requeriments](#requeriments)
 - [Download Android Package](#download-android-package)
 - [Author](#author)
 
 ## Preview
-
----
 
 <p align="center">
   <img src="./.github/images/preview.gif" alt="App Preview Gif" height="600px"/>
 </p>
 
 ## Technologies
-
----
 
 The follows tools were used on project build:
 
@@ -34,7 +31,11 @@ The follows tools were used on project build:
 
 ## Installation
 
----
+### Requeriments
+
+ - **[Node](https://nodejs.org/en/)**
+ - **[expo-cli](https://docs.expo.dev/get-started/installation/)**
+
 
 First clone the repository in your computer:
 
@@ -59,8 +60,6 @@ If you have a Android phone or Android Emulator installed in your computer, you 
 </p>
 
 ## Author
-
----
 
 <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/49854105?v=4" width="100px;" alt=""/>
 <br />
