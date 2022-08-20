@@ -24,7 +24,7 @@ export function FloatingLabelInput({
   autoFocus,
 }: FloatingLabelInputProps) {
   const [value, setValue] = useState("");
-  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused, setFocused] = useState(false);
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const [passwordVisibility, setPasswordVisibility] = useState(true);
 
@@ -57,8 +57,8 @@ export function FloatingLabelInput({
       </FloatingLabel>
       <InputWrapper>
         <Input
-          onFocus={() => setIsFocused(!isFocused)}
-          onBlur={() => setIsFocused(!isFocused)}
+          onFocus={() => setFocused(!isFocused)}
+          onBlur={() => setFocused(!isFocused)}
           showSoftInputOnFocus={!(type === "date")}
           value={value}
           onChangeText={(newText) => setValue(newText)}

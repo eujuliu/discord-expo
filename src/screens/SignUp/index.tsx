@@ -21,7 +21,7 @@ interface SignUpScreenProps
   extends NativeStackScreenProps<RootStackParamList, "SignUp"> {}
 
 export function SignUp({ navigation }: SignUpScreenProps) {
-  const [CustomSwitchSelectMode, CustomSwitchSetSelectMode] = useState("phone");
+  const [selectMode, setSelectMode] = useState("phone");
 
   return (
     <ImageBackground
@@ -39,10 +39,10 @@ export function SignUp({ navigation }: SignUpScreenProps) {
           <CustomSwitch
             value1="Phone"
             value2="Email"
-            selectMode={CustomSwitchSelectMode}
-            setSelectMode={CustomSwitchSetSelectMode}
+            selectMode={selectMode}
+            setSelectMode={setSelectMode}
           />
-          {CustomSwitchSelectMode === "phone" ? (
+          {selectMode === "phone" ? (
             <PhoneNumberInputContainer>
               <FloatingLabelInput
                 label="Country Code"

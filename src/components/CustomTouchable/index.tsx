@@ -1,21 +1,32 @@
 import React from "react";
 import { PressableProps } from "react-native";
 
-import { Touchable, CustomTouchableText } from "./styles";
+import { Touchable, TouchableText } from "./styles";
 
 interface CustomTouchableProps extends PressableProps {
   title: string;
-  backgroundColor: string;
+  fontSize?: string;
+  backgroundColor?: string;
+  margin?: string;
+  padding?: string;
 }
 
 export function CustomTouchable({
   title,
-  backgroundColor,
   onPress,
+  fontSize,
+  backgroundColor,
+  margin,
+  padding,
 }: CustomTouchableProps) {
   return (
-    <Touchable backgroundColor={backgroundColor} onPress={onPress}>
-      <CustomTouchableText>{title}</CustomTouchableText>
+    <Touchable
+      backgroundColor={backgroundColor}
+      onPress={onPress}
+      margin={margin}
+      padding={padding}
+    >
+      <TouchableText fontSize={fontSize}>{title}</TouchableText>
     </Touchable>
   );
 }

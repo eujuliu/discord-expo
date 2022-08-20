@@ -1,7 +1,7 @@
 import React from "react";
 import { Image } from "react-native";
 
-import { CustomMiniTouchable } from "@components/CustomMiniTouchable";
+import { CustomTouchable } from "@components/CustomTouchable";
 
 import { DefaultContainer } from "@assets/styles/global";
 import { FriendsSection, FriendsSmallText, FriendsText } from "./styles";
@@ -25,7 +25,12 @@ export function Friends() {
         <FriendsSmallText>
           Try adding a friend with their username, or scan to see who is nearby.
         </FriendsSmallText>
-        <CustomMiniTouchable title="Add Friend" fontSize="12px" />
+        <CustomTouchable
+          title="Add Friend"
+          fontSize="12px"
+          margin="0 auto"
+          padding="10px"
+        />
       </FriendsSection>
     </DefaultContainer>
   );

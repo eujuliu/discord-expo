@@ -1,7 +1,7 @@
 import React from "react";
+import { RootStackParamList } from "@navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-import { RootStackParamList } from "@navigation";
 import { CustomTouchable } from "@components/CustomTouchable";
 
 import { DefaultContainer } from "@assets/styles/global";

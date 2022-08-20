@@ -1,9 +1,12 @@
 import React from "react";
 import { Image } from "react-native";
 
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "@navigation";
+
 import { Ionicons } from "@expo/vector-icons";
 
-import { CustomMiniTouchable } from "@components/CustomMiniTouchable";
+import { CustomTouchable } from "@components/CustomTouchable";
 
 import { DefaultContainer } from "@assets/styles/global";
 import {
@@ -17,9 +20,6 @@ import {
   ServerListText,
   ServerListSmallText,
 } from "./styles";
-
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamList } from "@navigation";
 
 interface ServerListProps
   extends NativeStackScreenProps<RootStackParamList, "Home"> {}
@@ -64,7 +64,12 @@ export function ServerList({ navigation }: ServerListProps) {
         <ServerListSmallText>
           Try adding a friend with their username, or scan to see who is nearby.
         </ServerListSmallText>
-        <CustomMiniTouchable title="Add Friend" fontSize="12px" />
+        <CustomTouchable
+          title="Add Friend"
+          fontSize="12px"
+          margin="0 auto"
+          padding="10px"
+        />
       </ServerListSection>
     </DefaultContainer>
   );

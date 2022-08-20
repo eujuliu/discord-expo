@@ -4,8 +4,8 @@ import { Image, Linking, TouchableOpacity } from "react-native";
 import { RootStackParamList } from "@navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-import { CustomMiniTouchable } from "@components/CustomMiniTouchable";
 import { CustomCheckBox } from "@components/CustomCheckBox";
+import { CustomTouchable } from "@components/CustomTouchable";
 
 import { DefaultContainer, DefaultScreenTitle } from "@assets/styles/global";
 import {
@@ -47,7 +47,12 @@ export function FindYourFriends({ navigation }: FindYourFriendsScreenProps) {
       </FindYourFriendsSection>
 
       <FindYourFriendsSection>
-        <CustomMiniTouchable title="Get Started" fontSize="13px" />
+        <CustomTouchable
+          title="Get Started"
+          fontSize="13px"
+          margin="0 auto"
+          padding="10px"
+        />
         <CustomCheckBox title="Allow contacts to add me" />
         <FindYourFriendsSmallText
           fontSize={11.2}

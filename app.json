@@ -12,10 +12,16 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "ios": {
+      "bundleIdentifier": "com.julius.discord",
+      "buildNumber": "1.0.0"
+    },
     "android": {
+      "package": "com.julius.discord",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icons/adaptive-icon.png",
-        "backgroundColor": "#8c9eff"
+        "backgroundColor": "#8c9eff",
       }
     },
     "userInterfaceStyle": "automatic"

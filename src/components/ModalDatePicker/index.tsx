@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Modal } from "react-native";
+
 import DatePicker from "react-native-date-picker";
 
-import { CustomMiniTouchable } from "@components/CustomMiniTouchable";
+import { CustomTouchable } from "@components/CustomTouchable";
 
 import { ModalContainer, ModalPressable, ModalTitle } from "./styles";
 
@@ -46,7 +47,7 @@ export function ModalDatePicker({
           style={{ width: 250 }}
           androidVariant="nativeAndroid"
         />
-        <CustomMiniTouchable
+        <CustomTouchable
           title="Done"
           onPress={() => {
             setValue(
@@ -54,7 +55,10 @@ export function ModalDatePicker({
             );
             setDatePickerVisibility(!isDatePickerVisible);
           }}
-        ></CustomMiniTouchable>
+          fontSize="14px"
+          margin="0 auto"
+          padding="10px"
+        ></CustomTouchable>
       </ModalContainer>
     </Modal>
   );

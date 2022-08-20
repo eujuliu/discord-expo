@@ -20,7 +20,7 @@ interface HomeScreenProps
 
 const Tab = createBottomTabNavigator();
 
-export function Home({}: HomeScreenProps) {
+export function Home({ navigation }: HomeScreenProps) {
   const friendsButtonData = [
     { icon: "new-contact-icon.png", label: "New Contact" },
     { icon: "new-message-icon.png", label: "New Message" },
@@ -31,6 +31,7 @@ export function Home({}: HomeScreenProps) {
     {
       icon: "leave-icon.png",
       label: "Leave",
+      onPress: () => navigation.navigate("Start"),
     },
     { icon: "three-points-icon.png", label: "Extra Settings" },
   ];

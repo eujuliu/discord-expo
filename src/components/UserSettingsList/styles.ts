@@ -21,7 +21,6 @@ export const UserSettingsTouchable = styled.TouchableOpacity`
   align-items: center;
   width: 100%;
   flex-direction: row;
-  background-color: #36393f;
   padding-bottom: 30px;
 `;
 

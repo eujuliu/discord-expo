@@ -1,4 +1,5 @@
 import React from "react";
+import { GestureResponderEvent } from "react-native";
 
 import {
   HeaderButtonContainer,
@@ -7,20 +8,24 @@ import {
 } from "./styles";
 
 interface HeaderButtonsProps {
-  data: { icon: string; label: string }[];
+  data: {
+    icon: string;
+    label: string;
+    onPress?: (event: GestureResponderEvent) => void;
+  }[];
 }
 
 export function HeaderButtons({ data }: HeaderButtonsProps) {
   return (
     <HeaderButtonContainer>
-      {data.map((button) => {
+      {data.map(({ label, icon, onPress }) => {
         return (
-          <HeaderButton key={button.label}>
+          <HeaderButton key={label} onPress={onPress}>
             <HeaderButtonIcon
               source={{
-                uri: `https://raw.githubusercontent.com/jjuliomarttins/discord-expo/main/assets/icons/${button.icon}`,
+                uri: `https://raw.githubusercontent.com/jjuliomarttins/discord-expo/main/assets/icons/${icon}`,
               }}
-              accessibilityLabel={button.label}
+              accessibilityLabel={label}
             />
           </HeaderButton>
         );

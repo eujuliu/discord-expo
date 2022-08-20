@@ -1,8 +1,9 @@
 import React from "react";
 import { ScrollView } from "react-native";
 
-import { ServerCategoryListText } from "./styles";
 import { ServerCategoryListItem } from "@components/ServerCategoryItem";
+
+import { ServerCategoryListText } from "./styles";
 
 interface ServerCategoryListProps {
   data: { image: string; label: string }[];
@@ -16,14 +17,10 @@ export function ServerCategoryList({ data }: ServerCategoryListProps) {
     >
       <ServerCategoryListItem image={data[0].image} label={data[0].label} />
       <ServerCategoryListText>START FROM A TEMPLATE</ServerCategoryListText>
-      {data.map((value, index) => {
+      {data.map(({ label, image }, index) => {
         if (index === 0) return;
         return (
-          <ServerCategoryListItem
-            key={value.label}
-            image={value.image}
-            label={value.label}
-          />
+          <ServerCategoryListItem key={label} image={image} label={label} />
         );
       })}
     </ScrollView>

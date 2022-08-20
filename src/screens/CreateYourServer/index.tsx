@@ -1,12 +1,13 @@
 import React from "react";
 import { TouchableOpacity } from "react-native";
+
 import { Ionicons } from "@expo/vector-icons";
 
 import { RootStackParamList } from "@navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 import { ServerCategoryList } from "@components/ServerCategoryList";
-import { CustomMiniTouchable } from "@components/CustomMiniTouchable";
+import { CustomTouchable } from "@components/CustomTouchable";
 
 import { DefaultContainer, DefaultScreenTitle } from "@assets/styles/global";
 import {
@@ -21,7 +22,7 @@ interface CreateYourServerProps
   extends NativeStackScreenProps<RootStackParamList, "CreateYourServer"> {}
 
 export function CreateYourServer({ navigation }: CreateYourServerProps) {
-  const customListData = [
+  const serversTemplateData = [
     { image: "create-my-own.png", label: "Create My Own" },
     { image: "gaming.png", label: "Gaming" },
     { image: "school-club.png", label: "School Club" },
@@ -46,16 +47,18 @@ export function CreateYourServer({ navigation }: CreateYourServerProps) {
         talking.
       </CreateYourServerSmallText>
       <CreateYourServerOptions>
-        <ServerCategoryList data={customListData} />
+        <ServerCategoryList data={serversTemplateData} />
       </CreateYourServerOptions>
       <CreateYourServerFooter>
         <CreateYourServerFooterText>
           Have an invite already?
         </CreateYourServerFooterText>
-        <CustomMiniTouchable
+        <CustomTouchable
           title="Join a friend on Discord"
           backgroundColor="#4f545c"
           fontSize="12px"
+          margin="0 auto"
+          padding="10px"
         />
       </CreateYourServerFooter>
     </DefaultContainer>

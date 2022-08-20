@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageBackground, ScrollView, Text, View } from "react-native";
+import { ScrollView } from "react-native";
 
 import { UserSettingsList } from "@components/UserSettingsList";
 
