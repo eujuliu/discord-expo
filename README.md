@@ -45,9 +45,9 @@ First clone the repository in your computer:
 
 Install all dependencies with `npm install` or `yarn`:
 
-Run the local build with command `expo run:android` or `expo run:ios`
+Open your emulator `Android Studio` or `Xcode` and run the local build with command `expo run:android` or `expo run:ios`
 
-or run `expo start`, but the date-picker does not work.
+or run `expo start`, but the date-picker does not work (the app go crash).
 
 ## Download Android Package
 
